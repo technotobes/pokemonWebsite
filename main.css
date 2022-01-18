@@ -6,8 +6,12 @@ body {
 body,
 input {
   font-family: 'Montserrat', sans-serif;  
-  color:white;
+  color:rgb(0, 0, 0);
  
+}
+
+#charactersList {
+  color:white;
 }
 
 body,
