@@ -1,0 +1,100 @@
+body,
+input {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("../pokedex/images/pbBackround.jpg");
+  color:white;
+ 
+}
+
+body,
+header,
+main,
+#poke-evolution,
+.poke-stage,
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body,
+header,
+main,
+.card {
+  flex-direction: column;
+}
+
+main {
+  justify-content: flex-start;
+  min-height: 70vh;
+  margin-bottom: 10px;
+}
+
+footer,
+a {
+  color: #ffffff;
+}
+
+footer {
+  width: 100%;
+  height: 5vh;
+  background-color: #ef5350;
+  margin-top: 5px;
+}
+
+footer > p {
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+
+}
+
+a,
+.error {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: underline;
+}
+
+img {
+  max-height: 30vh;
+}
+
+#logo {
+  display: inline-block;
+  height: 3em;
+}
+
+#poke-evolution {
+  margin: 5vh;
+}
+
+
+.arrow {
+  max-height: 15vh;
+  opacity: 60%;
+ background-color:transparent;
+}
+
+.poke-stage {
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 5px;
+  border-radius: 5%;
+}
+
+.card > img {
+  margin: 10px;
+}
+
+.error {
+  margin: auto 0;
+}
+
