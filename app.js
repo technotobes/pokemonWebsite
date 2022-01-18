@@ -115,7 +115,7 @@
     try {
       for (let stage of evolutionArray) {
         let arrow = gen("img");
-        arrow.src = "../pokedex/images/arrow.png";
+        arrow.src = "/images/arrow.png";
         arrow.alt = "Arrow symbol";
         arrow.classList.add("arrow");
         await addStage(stage);
