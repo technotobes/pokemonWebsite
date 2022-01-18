@@ -49,10 +49,10 @@
 <body>
 
   <main>
-      <form action="searchedPokemon.html" method="GET">
+      <form id="input" action="searchedPokemon.html" method="GET">
         <input type="text" id="poke-name" name="poke-name" placeholder="Search for Pokemon">
       </form>
-      <button type="submit">Search</button>
+      <input type="button" name="theButton" value="Search" class="btn" data-pokemon="{{result['pokemon']}}" />
     <div id="poke-evolution">
     </div>
   </main>
