@@ -1,7 +1,13 @@
+body {
+  background: black url("/images/pbBackround.jpg") no-repeat fixed center;
+}
+
+
+
+
 body,
 input {
-  font-family: 'Montserrat', sans-serif;
-  background-image: url("/images/pbBackround.jpg");
+  font-family: 'Montserrat', sans-serif;  
   color:white;
  
 }
