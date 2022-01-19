@@ -43,7 +43,7 @@ function fetchData1() {
 fetchData1();
 
 function fetchData2() {
-  fetch('https://pokeapi.co/api/v2/ability/')
+  fetch(`https://pokeapi.co/api/v2/ability/`)
   .then(response => {
     if (!response.ok) {
       throw Error("ERROR");
