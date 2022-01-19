@@ -3,7 +3,7 @@ let searchedPokemon = document.getElementById("searchedPokemon").value;
 
 const pokemonName = document.getElementById("pokemonName");
 const pokeSpriteImage = document.getElementById("pokeSpriteImage")
-
+const pokemonBio = document.getElementById("pokemonBio")
 
 
 
@@ -12,7 +12,7 @@ const pokeSpriteImage = document.getElementById("pokeSpriteImage")
 const params = new URLSearchParams(window.location.search);
 let pokeName = params.get('poke-name');
 
-
+// fetching information from /pokemon API
 const loadCharacters = async () => {
 
 
@@ -22,6 +22,7 @@ const loadCharacters = async () => {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         let pCharacters = await res.json();
         displayCharactersDetails(pCharacters);
+        fetchPokeSpecies();
 
     } catch (err){
         console.error(err);
@@ -37,7 +38,27 @@ const displayCharactersDetails = (characters) => {
 
 } 
 
+
+// fetching Infomation from /pokemon-species API
+
+const fetchPokeSpecies = async () => {
+    
+    // Injecting user input from URL into API Link to GET data
+    try {
+        let name = pokeName.toLowerCase()
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${name}`)
+        let pCharacters = await res.json();
+        displayCharactersBio(pCharacters);
+        
+    } catch (err){
+        console.error(err);
+    }
+}
+const displayCharactersBio = (characters) => {
+    console.log(characters)
+    pokemonBio.innerHTML = `<strong>${characters.flavor_text_entries[0].flavor_text}</strong>`
+
+} 
+
 document.getElementById("searchBtn").onclick = loadCharacters();
-
-
 

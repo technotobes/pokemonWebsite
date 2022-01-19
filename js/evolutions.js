@@ -146,21 +146,19 @@
       addCardText(card, name, pokeInfo);
       stageContainer.appendChild(card);
 
-
       
     }
     id("poke-evolution").appendChild(stageContainer);
     
     
-    console.log(id("poke-evolution"))
   }
 
   
   function addCardText(card, name, pokeInfo) {
-    let textName = gen("h3");
+    let textName = gen("h5");
     console.log(textName)
-    let textType = gen("h3");
-    textName.textContent = name;
+    let textType = gen("h8");
+    textName.textContent = name.slice(0,1).toUpperCase() + name.slice(1);
     if (pokeInfo.types[1] === undefined) {
       textType.textContent = "type: " + pokeInfo.types[0].type.name;
     } else {

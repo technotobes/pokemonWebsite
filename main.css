@@ -30,6 +30,7 @@ main,
   flex-direction: column;
 }
 
+
 main {
   justify-content: flex-start;
   min-height: 70vh;
@@ -63,12 +64,17 @@ a,
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-img {
-  max-height: 30vh;
+#pokeSpriteImage img{
+  max-height: 40vh;
 }
+
+.poke-stage img {
+  max-height: 12vh;
+}
+
 
 #logo {
   display: inline-block;
@@ -93,6 +99,7 @@ img {
 .card {
   margin: 5px;
   border-radius: 5%;
+  padding: 5px;
 }
 
 .card > img {
@@ -103,10 +110,13 @@ img {
   margin: auto 0;
 }
 
+#pokeInfoContainer {
+  background-color: rgba(134, 133, 133, 0.842);
+  border-radius: 20px;
+}
+
 #pokemonDetailsContainer{
   display:flex;
-  background-color: rgb(134, 133, 133);
-  border-radius: 20px;
   width: 70vw;
   height: 50vh;
   padding: 20px;
