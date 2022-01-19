@@ -132,25 +132,33 @@
   async function addStage(stage) {
     let stageContainer = gen("poke-stage");
     stageContainer.classList.add("poke-stage");
-
+    
    
     for (let name of stage) {
-      let card = gen("div");
+      let card = gen("a");
       let img = gen("img");
       let pokeInfo = await makePokemonRequest(name);
       img.src = pokeInfo.sprites.other["official-artwork"].front_default;
       img.alt = "Official artwork of " + name;
+      card.href = `http://127.0.0.1:5500/results.html?poke-name=${name}`
       card.appendChild(img);
       addCardStyle(card, pokeInfo);
       addCardText(card, name, pokeInfo);
       stageContainer.appendChild(card);
+
+
+      
     }
     id("poke-evolution").appendChild(stageContainer);
+    
+    
+    console.log(id("poke-evolution"))
   }
 
   
   function addCardText(card, name, pokeInfo) {
     let textName = gen("h3");
+    console.log(textName)
     let textType = gen("h3");
     textName.textContent = name;
     if (pokeInfo.types[1] === undefined) {
