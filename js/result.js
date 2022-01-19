@@ -1,7 +1,11 @@
 const searchBtn = document.getElementById("searchBtn");
 let searchedPokemon = document.getElementById("searchedPokemon").value;
-const charactersList = document.getElementById("charactersList");
-let pokemonNameList = [];
+
+const pokemonName = document.getElementById("pokemonName");
+const pokeSpriteImage = document.getElementById("pokeSpriteImage")
+
+
+
 
 
 // Grab user input from URL
@@ -27,7 +31,9 @@ const loadCharacters = async () => {
 
 // Displaying Pokemon Data Details
 const displayCharactersDetails = (characters) => {
-    charactersList.innerHTML = `${characters.forms[0].name}`
+    console.log(characters)
+    pokemonName.innerHTML = `${characters.forms[0].name}`
+    pokeSpriteImage.innerHTML = `<img src="${characters.sprites.other["official-artwork"].front_default}" />`
 
 } 
 

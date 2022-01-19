@@ -106,3 +106,12 @@ img {
   margin: auto 0;
 }
 
+#pokemonDetailsContainer{
+
+  background-color: rgb(134, 133, 133);
+  border-radius: 20px;
+  width: 70vw;
+  height: 50vh;
+  padding: 20px;
+}
+
