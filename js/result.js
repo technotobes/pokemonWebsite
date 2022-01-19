@@ -34,25 +34,4 @@ const displayCharactersDetails = (characters) => {
 document.getElementById("searchBtn").onclick = loadCharacters();
 
 
-function fetchPokemon() {
-    fetch(
-        `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118`
-    ).then((response) => {
-        return response.json();
-    }).then((data) => {
-        addPokemonToList(data);
-    });
-}
 
-function addPokemonToList(data) {
-    const pokemonData = data.results;
-    
-    pokemonData.forEach((item) => {
-        if (!item.name.includes("-")) {
-            pokemonNameList.push(item.name);
-        }
-    });
-}
-
-fetchPokemon()
-console.log(pokemonNameList)
