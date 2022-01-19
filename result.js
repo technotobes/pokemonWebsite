@@ -1,35 +1,58 @@
-const searchBtn = document.getElementById("searchBtn")
-let searchedPokemon = document.getElementById("searchedPokemon").value
-const searchBtn2 = document.getElementById("searchBtn2")
+const searchBtn = document.getElementById("searchBtn");
+let searchedPokemon = document.getElementById("searchedPokemon").value;
+const charactersList = document.getElementById("charactersList");
+let pokemonNameList = [];
 
 
+// Grab user input from URL
+const params = new URLSearchParams(window.location.search);
+let pokeName = params.get('poke-name');
 
-
-const charactersList = document.getElementById("charactersList")
-
-const params = new URLSearchParams(window.location.search)
-let named = params.get('poke-name')
-console.log(named)
 
 const loadCharacters = async () => {
-    
-    console.log(searchedPokemon)
 
+
+    // Injecting user input from URL into API Link to GET data
     try {
-        let lowPokeSearch = named.toLowerCase()
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${lowPokeSearch}`)
+        let name = pokeName.toLowerCase()
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         let pCharacters = await res.json();
-        displayCharacters(pCharacters);
+        displayCharactersDetails(pCharacters);
 
     } catch (err){
         console.error(err);
     }
 
 } 
-const displayCharacters = (characters) => {
-    console.log(characters)
+
+// Displaying Pokemon Data Details
+const displayCharactersDetails = (characters) => {
     charactersList.innerHTML = `${characters.forms[0].name}`
 
 } 
 
 document.getElementById("searchBtn").onclick = loadCharacters();
+
+
+function fetchPokemon() {
+    fetch(
+        `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118`
+    ).then((response) => {
+        return response.json();
+    }).then((data) => {
+        addPokemonToList(data);
+    });
+}
+
+function addPokemonToList(data) {
+    const pokemonData = data.results;
+    
+    pokemonData.forEach((item) => {
+        if (!item.name.includes("-")) {
+            pokemonNameList.push(item.name);
+        }
+    });
+}
+
+fetchPokemon()
+console.log(pokemonNameList)
