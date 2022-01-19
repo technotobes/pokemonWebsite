@@ -10,9 +10,6 @@ input {
  
 }
 
-#charactersList {
-  color:white;
-}
 
 body,
 header,
@@ -107,11 +104,16 @@ img {
 }
 
 #pokemonDetailsContainer{
-
+  display:flex;
   background-color: rgb(134, 133, 133);
   border-radius: 20px;
   width: 70vw;
   height: 50vh;
   padding: 20px;
+  justify-content:space-evenly;
 }
 
+#pokemonName {
+  color: white;
+  font-size: larger;
+}

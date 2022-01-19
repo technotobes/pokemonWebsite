@@ -32,7 +32,7 @@ const loadCharacters = async () => {
 // Displaying Pokemon Data Details
 const displayCharactersDetails = (characters) => {
     console.log(characters)
-    pokemonName.innerHTML = `${characters.forms[0].name}`
+    pokemonName.innerHTML = `<strong>${characters.forms[0].name.slice(0,1).toUpperCase()}${characters.forms[0].name.slice(1,characters.forms[0].name.length)}</strong>`
     pokeSpriteImage.innerHTML = `<img src="${characters.sprites.other["official-artwork"].front_default}" />`
 
 } 

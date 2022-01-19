@@ -28,15 +28,15 @@
   };
 
   window.addEventListener("load", init);
-
+  
   
   function init() {
-    id("searchedPokemon").addEventListener("keypress", event => makeRequest(event));
+    id("searchedPokemon").addEventListener("keypress", makeRequest(pokeName));
+    
   }
-
+  
  
   async function makeRequest(event) {
-    if (event.key === "Enter") {
       try {
         let basePokemon = await makePokemonSpeciesRequest(event);
         let evolutionChain = await makeEvolutionRequest(basePokemon.evolution_chain.url);
@@ -45,7 +45,7 @@
       } catch (err) {
         handleError();
       }
-    }
+    
   }
 
   
@@ -68,7 +68,7 @@
 
   async function makePokemonSpeciesRequest(event) {
   
-    let formattedName = event.target.value.replace(/[.,/#!$%^&*;:{}=_`'~()]/g, "")
+    let formattedName = event.replace(/[.,/#!$%^&*;:{}=_`'~()]/g, "")
       .replace(/\s+/g, '-')
       .toLowerCase();
     let resp = await fetch(BASE_URL + "pokemon-species/" + formattedName);
@@ -115,7 +115,7 @@
     try {
       for (let stage of evolutionArray) {
         let arrow = gen("img");
-        arrow.src = "../images/arrow.png";
+        arrow.src = "/images/arrow.png";
         arrow.alt = "Arrow symbol";
         arrow.classList.add("arrow");
         await addStage(stage);
