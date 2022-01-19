@@ -117,6 +117,7 @@
         let arrow = gen("img");
         arrow.src = "/images/arrow.png";
         arrow.alt = "Arrow symbol";
+        arrow.id = "arrow"
         arrow.classList.add("arrow");
         await addStage(stage);
         container.appendChild(arrow);

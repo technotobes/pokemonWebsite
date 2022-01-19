@@ -127,3 +127,12 @@ a {
   color: white;
   font-size: larger;
 }
+
+#arrow {
+  width: 3vw;
+}
+
+h3 {
+  text-align: center;
+  color:white;
+}
