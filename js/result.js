@@ -66,7 +66,7 @@ const displayCharactersDetails = (characters) => {
     document.querySelector("#moves").insertAdjacentHTML('afterbegin', getMoves)
 
 
-    
+    // clickable items in dropdown menu
     const abilitiesSelect = document.querySelector("#ability")
 
     abilitiesSelect.addEventListener('change', (event) => {
@@ -85,7 +85,7 @@ const displayCharactersDetails = (characters) => {
 
 }
 
-
+// get data of moves from url
 function getMoveStats(url) {
     fetch(url
     ).then((response) => {
@@ -106,9 +106,6 @@ function displayMoveDetails(data) {
         
     })
 }
-
-
-
 
 function getAbilityStats(url) {
     fetch(url
@@ -157,3 +154,10 @@ const displayCharactersBio = (characters) => {
 document.getElementById("searchBtn").onclick = loadCharacters();
 
 
+function basicPopup(url) {
+    popupWindow = window.open(url,'popUpWindow','height=700,width=750,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+        }
+
+function basicPopup2(url) {
+    popupWindow = window.open(url,'popUpWindow','height=700,width=750, left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+        }

@@ -1,6 +1,6 @@
 
 body{
-    background-image: url(../pokedex/images/pbBackround.jpg);
+    background-image: url(/images/pbBackround.jpg);
 }
 
 
@@ -94,7 +94,7 @@ input {
 }
 
 .hoverable_list li:hover {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 .no-padding {
