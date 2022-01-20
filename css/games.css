@@ -1,0 +1,52 @@
+
+
+body{
+    background-image: url(../pokedex/images/pbBackround.jpg);
+  }
+  
+  
+  footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #ef5350;
+    margin-bottom:2rem;
+  }
+  footer > p {
+    text-align: center;
+  }
+  .infoText{
+      text-indent: 2rem;
+  }
+  
+  @media screen and (min-width: 500px) {
+    .button {
+        width: auto;
+    }
+    input {
+        width: 80%!important;
+        margin-right: 10px;
+    }
+    .form-flex {
+        flex-direction: row;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .button {
+        width: auto;
+    }
+    input {
+        width: 40%!important;
+        margin-right: 10px;
+    }
+    .form-flex {
+        flex-direction: row;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+  } 

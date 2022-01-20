@@ -11,8 +11,7 @@ request.onload = () => {
 }
 
 function fetchData1() {
-  
-  console.log(id[0])
+
   fetch(`https://pokeapi.co/api/v2/move/`)
   .then(response => {
     if (!response.ok) {

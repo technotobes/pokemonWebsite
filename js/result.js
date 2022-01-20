@@ -72,11 +72,11 @@ const displayCharactersBio = (characters) => {
 
 document.getElementById("searchBtn").onclick = loadCharacters();
 
-let id = ""
 
 function getPokeID(character) {
-    id.push(character.id)
-    
+    id = character.id 
 }
+
+
 console.log(id)
-console.log(id[0])
+
