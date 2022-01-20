@@ -143,16 +143,22 @@ nav {
 }
 
 #searchBoxContainer { 
-  background-color: rgba(128, 128, 128, 0.555);
+  background-color: rgba(128, 128, 128, 0.808);
   align-self: center;
+  align-items: center;
   padding: 40px;
   border-radius: 10px;
+  display: flex;
 }
 
 #pokeContainer {
   display:flex;
   justify-content:center;
-  height:80vh;
+  height:88vh;
+}
+
+form {
+  margin: 0;
 }
 
 button {
