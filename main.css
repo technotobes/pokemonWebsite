@@ -173,3 +173,10 @@ button {
   padding: 10px;
   justify-content: space-between;
 }
+
+.columns{
+  display: flex;
+}
+.column{
+  flex: 50%;
+}
