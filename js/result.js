@@ -25,7 +25,7 @@ const loadCharacters = async () => {
         let pCharacters = await res.json();
         displayCharactersDetails(pCharacters);
         fetchPokeSpecies();
-        getPokeID(pCharacters)
+        
 
     } catch (err){
         console.error(err);
@@ -35,6 +35,7 @@ const loadCharacters = async () => {
 
 // Displaying Pokemon Data Details
 const displayCharactersDetails = (characters) => {
+    const pokemonData = characters;
     console.log(characters)
     pokemonName.innerHTML = `<strong>${characters.forms[0].name.slice(0,1).toUpperCase()}${characters.forms[0].name.slice(1,characters.forms[0].name.length)}</strong>`
     pokeSpriteImage.innerHTML = `<img src="${characters.sprites.other["official-artwork"].front_default}" />`
@@ -45,8 +46,91 @@ const displayCharactersDetails = (characters) => {
                             <p>Base Sp. Att: ${characters.stats[3].base_stat}</p>
                             <p>Base Sp. Def: ${characters.stats[4].base_stat}</p>
                             <p>Base Spd: ${characters.stats[5].base_stat}</p>`
+                    
 
-} 
+    // insert ability names in drop down                        
+    let getAbility = characters.abilities.map((ability) => {
+        return `<div class="move">
+        <option value="${ability.ability.url}">${ability.ability.name}</option>
+        </div>`
+    }).join("")
+    document.querySelector("#ability").insertAdjacentHTML('afterbegin', getAbility)
+
+    
+    // insert move names into drop down
+    let getMoves = characters.moves.map((move) => {
+        return `<div class="move">
+        <option value="${move.move.url}">${move.move.name}</option>
+        </div>`
+    }).join("")
+    document.querySelector("#moves").insertAdjacentHTML('afterbegin', getMoves)
+
+
+    
+    const abilitiesSelect = document.querySelector("#ability")
+
+    abilitiesSelect.addEventListener('change', (event) => {
+    const url = event.target.value;
+    console.log(url)
+    getAbilityStats(url)
+    })
+
+    const movesSelect = document.querySelector("#moves")
+
+    movesSelect.addEventListener('change', (event) => {
+    const url = event.target.value;
+    console.log(url)
+    getMoveStats(url)
+    })
+
+}
+
+
+function getMoveStats(url) {
+    fetch(url
+    ).then((response) => {
+        return response.json()
+    }).then((data) => {
+        displayMoveDetails(data)
+    }).catch((error) => {
+        return error;
+    })
+}
+
+function displayMoveDetails(data) {
+    const details = document.querySelector("#movesDetails")
+    const detailsData = data.effect_entries;
+    detailsData.forEach((detailItem) => {
+        console.log(detailItem.effect)
+        details.innerText = detailItem.effect
+        
+    })
+}
+
+
+
+
+function getAbilityStats(url) {
+    fetch(url
+    ).then((response) => {
+        return response.json()
+    }).then((data) => {
+        displayAbiltiesDetails(data)
+    }).catch((error) => {
+        return error;
+    })
+}
+
+function displayAbiltiesDetails(data) {
+    const details = document.querySelector("#abilitiesDetails")
+    const detailsData = data.effect_entries;
+    detailsData.forEach((detailItem) => {
+        if (detailItem.language.name === "en") {
+            console.log(detailsData)
+            details.innerText = detailItem.effect
+        }
+    })
+}
 
 
 // fetching Infomation from /pokemon-species API
@@ -72,11 +156,4 @@ const displayCharactersBio = (characters) => {
 
 document.getElementById("searchBtn").onclick = loadCharacters();
 
-
-function getPokeID(character) {
-    id = character.id 
-}
-
-
-console.log(id)
 
