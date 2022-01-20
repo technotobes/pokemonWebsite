@@ -1,5 +1,5 @@
 body {
-  background: black url("/images/pbBackround.jpg") no-repeat fixed center;
+  background: black url("../pokemonWebsite/images/pbBackround.jpg") no-repeat fixed center;
 }
 
 
@@ -17,7 +17,7 @@ main,
 #poke-evolution,
 .poke-stage,
 .card {
-  display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -138,7 +138,7 @@ h3 {
 }
 
 nav {
-  border-radius: 10px;
+
   background-color: rgba(241, 93, 93, 0.746);
 }
 
