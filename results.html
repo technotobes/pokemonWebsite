@@ -74,13 +74,15 @@
 
       </form>
       <div id=pokeInfoContainer>
+
         <div id=pokemonDetailsContainer>
 
           <div id="pokeInfo">
             <div id="pokemonName"></div>
-            
+            <div id="pokeSpriteImage"></div>
             <div id="pokemonBio"></div>
             <div id="pokedexNumber"></div>
+
             <div class="columns">
               <div class="column">
                <div id="baseStats"></div>
@@ -89,25 +91,32 @@
                <div id="baseSpecial"></div>
                </div>
             </div>
-            <div id="pokeSkillsContainer"><div>
+
+            <div id="pokeSkillsContainer">
+              <div>  
                 <label for="pokeAbilities">Abilities:</label>
-              <select name="pokeAbilities" id="ability"></select>
-              <div id="abilitiesDetails"></div>  
+                <select name="pokeAbilities" id="ability"></select>
+                <div id="abilitiesDetails"></div>  
               </div>
+
               <div>
                 <label for="pokeMoves">Moves:</label>
                 <select name="pokeMoves" id="moves"></select>
                 <div id="movesDetails"></div>
               </div>
             </div>
+            
           </div>
 
-          <div id="pokeSpriteImage"></div>
+          
         </div>
 
-        <h3>Evolutions</h3>
-        <div id="poke-evolution"></div>
-      </div>
+        <div id="pokeEvoContainer">
+          <h3>Evolutions</h3>
+          <div id="poke-evolution"></div>
+        </div>
+
+        </div>
 
 
 

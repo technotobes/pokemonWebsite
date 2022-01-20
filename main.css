@@ -2,7 +2,6 @@ body {
   background: black url("/images/pbBackround.jpg") no-repeat fixed center;
 }
 
-
 body,
 input {
   font-family: 'Montserrat', sans-serif;  
@@ -10,7 +9,82 @@ input {
  
 }
 
+footer {
+  width: 100%;
+  background-color: #ef5350;
+  position:fixed;
+  bottom:0;
+  padding:5px;
+  text-align: center;
+  font-size: smaller;
+}
 
+.arrow {
+  max-height: 10vh;
+  opacity: 60%;
+ background-color:transparent;
+}
+
+
+.card {
+  margin: 5px;
+  border-radius: 5%;
+  padding: 5px;
+  max-width: 10vw;
+  text-align: center;
+}
+
+.card > img {
+  margin: 10px;
+}
+
+#pokeSpriteImage {
+  display:flex;
+  justify-content: center;
+}
+
+#pokeSpriteImage img{
+  max-height: 60vh;
+  
+}
+
+.poke-stage img {
+  max-height: 10vh;
+  max-width: 10vw;
+  
+}
+
+main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#pokeInfoContainer {
+  background-color: rgba(134, 133, 133, 0.842);
+  border-radius: 20px;
+  padding:15px;
+  width: 75vw;
+}
+
+#pokeEvoContainer {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#poke-evolution{
+  display:flex;
+  align-items: center;
+}
+
+h3 {
+  text-align: center;
+  color:white;
+}
+
+/*
 body,
 header,
 main,
@@ -42,15 +116,7 @@ a {
   color: #ffffff;
 }
 
-footer {
-  width: 100%;
-  background-color: #ef5350;
-  position:fixed;
-  bottom:0;
-  padding:5px;
-  text-align: center;
-  font-size: smaller;
-}
+
 
 
 input {
@@ -67,13 +133,6 @@ a {
   text-decoration: none;
 }
 
-#pokeSpriteImage img{
-  max-height: 40vh;
-}
-
-.poke-stage img {
-  max-height: 12vh;
-}
 
 
 #logo {
@@ -86,41 +145,21 @@ a {
 }
 
 
-.arrow {
-  max-height: 15vh;
-  opacity: 60%;
- background-color:transparent;
-}
 
-.poke-stage {
-  flex-wrap: wrap;
-}
 
-.card {
-  margin: 5px;
-  border-radius: 5%;
-  padding: 5px;
-}
-
-.card > img {
-  margin: 10px;
-}
 
 .error {
   margin: auto 0;
 }
 
-#pokeInfoContainer {
-  background-color: rgba(134, 133, 133, 0.842);
-  border-radius: 20px;
-}
 
-#pokemonDetailsContainer{
+
+
+
+#pokeEvoContainer {
   display:flex;
-  width: 70vw;
-  height: 50vh;
-  padding: 20px;
-  justify-content:space-evenly;
+  justify-content: right;
+  position:static;
 }
 
 #pokemonName {
@@ -132,10 +171,7 @@ a {
   width: 3vw;
 }
 
-h3 {
-  text-align: center;
-  color:white;
-}
+
 
 nav {
   border-radius: 10px;
@@ -151,11 +187,7 @@ nav {
   display: flex;
 }
 
-#pokeContainer {
-  display:flex;
-  justify-content:center;
-  height:88vh;
-}
+
 
 form {
   margin: 0;
@@ -168,11 +200,9 @@ button {
   
 }
 
-#pokeSkillsContainer {
-  display:flex;
-  padding: 10px;
-  justify-content: space-between;
-}
+ */
+
+
 
 .columns{
   display: flex;
