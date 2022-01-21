@@ -7,6 +7,7 @@ const pokemonBio = document.getElementById("pokemonBio")
 const pokedexNumber = document.getElementById("pokedexNumber")
 const baseStats = document.getElementById("baseStats")
 const baseSpecial= document.getElementById("baseSpecial")
+const pokemonType = document.getElementById("pokemonType")
 
 
 
@@ -25,11 +26,9 @@ const loadCharacters = async () => {
         let pCharacters = await res.json();
         displayCharactersDetails(pCharacters);
         fetchPokeSpecies();
-        
-
-    } catch (err){
-        
-    }
+        } catch(err) {
+            console.log(error)
+        }
 
 } 
 
@@ -40,6 +39,7 @@ const displayCharactersDetails = (characters) => {
     pokemonName.innerHTML = `<strong>${characters.forms[0].name.slice(0,1).toUpperCase()}${characters.forms[0].name.slice(1,characters.forms[0].name.length)}</strong>`
     pokeSpriteImage.innerHTML = `<img src="${characters.sprites.other["official-artwork"].front_default}" />`
     pokedexNumber.innerHTML = `Pokedex #: ${characters.game_indices[8].game_index}`
+    pokemonType.innerHTML = `<p>Type: ${characters.types[0].type.name.slice(0,1).toUpperCase()}${characters.types[0].type.name.slice(1,characters.types[0].type.length)}</p>`
     baseStats.innerHTML = ` <p>Base HP: ${characters.stats[0].base_stat}</p>
                             <p>Base Att: ${characters.stats[1].base_stat}</p>
                             <p>Base Def: ${characters.stats[2].base_stat}</p>`
@@ -67,6 +67,13 @@ const displayCharactersDetails = (characters) => {
 
     // clickable items in dropdown menu
     const abilitiesSelect = document.querySelector("#ability")
+    const movesSelect = document.querySelector("#moves")
+
+    // displays details of first ability/move of the list
+    const firstAbility = pokemonData.abilities[0].ability.url
+    const firstMove = pokemonData.moves[0].move.url
+    getAbilityStats(firstAbility)
+    getMoveStats(firstMove)
 
     abilitiesSelect.addEventListener('change', (event) => {
     const url = event.target.value;
@@ -74,7 +81,6 @@ const displayCharactersDetails = (characters) => {
     getAbilityStats(url)
     })
 
-    const movesSelect = document.querySelector("#moves")
 
     movesSelect.addEventListener('change', (event) => {
     const url = event.target.value;

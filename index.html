@@ -56,22 +56,18 @@
       </ul>
       
     </div>
+
+    <form id="input" action="results.html" method="GET" class="d-flex justify-content-end">
+      <input class="form-control me-2" id="searchedPokemon" name="poke-name" type="text" placeholder="Search for Pokémon" aria-label="Search" autocomplete="off" list="pokemonNameList" required />
+      <button class="btn" id="searchBtn" type="submit">Search</button>
+      <datalist></datalist>
+    </form>
   </nav>
 
     <div id="mainContainer">
 
       <div id="pokeContainer">
-        <div id="searchBoxContainer">
-            <form id="input" action="results.html" method="GET">
-              <div id="inputContainer">
-                <input type="text" class="input" id="searchedPokemon" name="poke-name" placeholder="Search for Pokemon" autocomplete="off" list="pokemonNameList" required />
-                <datalist>
-                  
-                </datalist>
-                <button id="searchBtn">Search</button>
-              </div>
-            </form>
-          </div>
+
         </div>
 
         <div id="pokeSpritesContainer"></div>

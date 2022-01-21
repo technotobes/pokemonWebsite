@@ -180,6 +180,7 @@ h3 {
 #searchBtn {
   background-color: black;
   color:white;
+  margin-left: 5px;
 }
 
 #pokemonName {
@@ -206,9 +207,15 @@ h3 {
   border-radius: 10px;
 }
 
+h5 {
+  padding:15px;
+  color: white;
+  font-weight: 600;
+}
+
 .column{
   color: red;
-  padding:10px;
+  padding:20px;
   font-weight:500;
   flex: 1%;
 }
@@ -254,4 +261,10 @@ h3 {
   overflow: scroll;
   height:40vh;
   color:white;
+}
+
+#pokemonType {
+  color: white;
+  font-weight: 500;
+  margin-left: 50px;
 }
