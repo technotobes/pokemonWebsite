@@ -8,7 +8,7 @@
   </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="../pokemonWebsite/css/profile.css" rel="stylesheet">
+  <link href="/css/profile.css" rel="stylesheet">
 
  
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -56,6 +56,12 @@
       </ul>
       
     </div>
+
+    <form id="input" action="results.html" method="GET" class="d-flex justify-content-end">
+      <input class="form-control me-2" id="searchedPokemon" name="poke-name" type="text" placeholder="Search for Pokémon" aria-label="Search" autocomplete="off" list="pokemonNameList" required />
+      <button class="btn" id="searchBtn" type="submit">Search</button>
+      <datalist></datalist>
+    </form>
   </nav>
 
   <div class="columns mt-5 mb-5">
@@ -80,8 +86,8 @@
                             <p>Male</p>
                             <p></p>
                             <p></p>
-                            <a href='https://www.linkedin.com/in/username'><img src='../pokemonWebsite/images/linkedinIcon.png' width='20'></a>
-                            <a href='https://github.com/username'><img src='../pokemonWebsite/images/gitHubIcon.png' width='20'></a>
+                            <a href='https://www.linkedin.com/in/username'><img src='/images/linkedinIcon.png' width='20'></a>
+                            <a href='https://github.com/username'><img src='/images/gitHubIcon.png' width='20'></a>
                         </div>
                     </div>
 
@@ -98,22 +104,22 @@
                 <div class="content">
                     <ul id="pokemonCharacteristics" class="hoverable_list">
                         <li class="hoverable_list__item">
-                            <img src="../pokemonWebsite/images/height.jpg" alt="Image" class="characteristics__image" style="width: 50px" />
+                            <img src="/images/height.jpg" alt="Image" class="characteristics__image" style="width: 50px" />
                             <span class="characteristics__large_text"><strong>Height</strong></span><br />
                             <span>Insert Height</span>
                         </li>
                         <li class="hoverable_list__item">
-                            <img src="../pokemonWebsite/images/eyecolor.png" alt="Image" class="characteristics__image" style="width: 50px" />
+                            <img src="/images/eyecolor.png" alt="Image" class="characteristics__image" style="width: 50px" />
                             <span class="characteristics__large_text"><strong>Eye Color</strong></span><br />
                             <span>Insert Eye Color</span>
                         </li>
                         <li class="hoverable_list__item">
-                            <img src="../pokemonWebsite/images/haircolor.jpg" alt="Image" class="characteristics__image" style="width: 50px" />
+                            <img src="/images/haircolor.jpg" alt="Image" class="characteristics__image" style="width: 50px" />
                             <span class="characteristics__large_text"><strong>Hair Color</strong></span><br />
                             <span class="infoText">Inset Hair Color</span>
                         </li>
                         <li class="hoverable_list__item">
-                            <img src="../pokemonWebsite/images/texasicon.png" alt="Image" class="characteristics__image" style="width: 50px" />
+                            <img src="/images/texasicon.png" alt="Image" class="characteristics__image" style="width: 50px" />
                             <span class="characteristics__large_text"><strong>Location</strong></span><br />
                             <span>Insert Location</span>
                         </li>

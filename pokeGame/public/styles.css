@@ -35,23 +35,22 @@ body {
   background-image: url("../../images/pbBackround.jpg");
 }
 
-main {
-  position: relative;
-  width: 575px;
-  background-image: url('https://res.cloudinary.com/dzynqn10l/image/upload/v1633196203/Msc/pokemon-bg_ig4uv3.jpg');
-  background-size: 110%;
-  background-repeat: no-repeat;
-  margin-left: 670px;
-  margin-top: 200px;
+
+.game-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* #pokemonGameContainer {
-  display:flex;
-  height:100vh;
-  width: 100vw;
-  align-content: center;
-  justify-content: center;
-} */
+.pokemon-game {
+  position: relative;
+  width: 575px;
+  background-image: url("https://res.cloudinary.com/dzynqn10l/image/upload/v1633196203/Msc/pokemon-bg_ig4uv3.jpg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+}
 
 #pokemon-container {
   height: 355px;
@@ -150,24 +149,24 @@ button.incorrect {
   left: 0;
 }
 
-main.fetching #pokeball {
+.pokemon-game.fetching #pokeball {
   visibility: visible;
 }
 
-main.fetching #pokemon-image {
+.pokemon-game.fetching #pokemon-image {
   visibility: hidden;
   display: none;
 }
 
-main.fetching #choices {
+.pokemon-game.fetching #choices {
   display: none;
 }
 
-main.revealed #pokemon-image {
+.pokemon-game.revealed #pokemon-image {
   filter: none;
 }
 
-main.revealed #answer {
+.pokemon-game.revealed #answer {
   display: block;
 }
 
@@ -184,3 +183,4 @@ main.revealed #answer {
   95% { transform: rotate(-6deg); }
   100% { transform: rotate(0deg); }
 }
+

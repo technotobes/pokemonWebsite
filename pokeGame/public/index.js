@@ -1,13 +1,12 @@
 let gameData;
-const main = document.querySelector('main');
-const pokemonImage = document.querySelector('#pokemon-image');
-const textOverlay = document.querySelector('#text-overlay');
-const choices = document.querySelector('#choices');
-const playBtn = document.querySelector('#play');
-playBtn.addEventListener('click', fetchData);
+const pokemonGame = document.querySelector(".pokemon-game");
+const pokemonImage = document.querySelector("#pokemon-image");
+const textOverlay = document.querySelector("#text-overlay");
+const choices = document.querySelector("#choices");
+const playBtn = document.querySelector("#play");
+playBtn.addEventListener("click", fetchData);
 loadVoice();
 addAnswerHandler();
-
 
 async function fetchData() {
   resetImage();
@@ -17,39 +16,42 @@ async function fetchData() {
 }
 
 function resetImage() {
-  pokemonImage.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D';
-  main.classList.add('fetching');
-  main.classList.remove('revealed');
+  pokemonImage.src =
+    "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D";
+  pokemonGame.classList.add("fetching");
+  pokemonGame.classList.remove("revealed");
 }
 
 function showSilhouette() {
-  main.classList.remove('fetching');
+  pokemonGame.classList.remove("fetching");
   pokemonImage.src = gameData.correct.image;
 }
 
 function displayChoices() {
   const { pokemonChoices } = gameData;
-  const choicesHTML = pokemonChoices.map(({ name }) => {
-    return `<button data-name="${name}">${name}</button>`;
-  }).join('');
+  const choicesHTML = pokemonChoices
+    .map(({ name }) => {
+      return `<button data-name="${name}">${name}</button>`;
+    })
+    .join("");
 
   choices.innerHTML = choicesHTML;
 }
 
 function addAnswerHandler() {
-  choices.addEventListener('click', e => {
+  choices.addEventListener("click", (e) => {
     const { name } = e.target.dataset;
-    const resultClass = (name === gameData.correct.name) ?
-      'correct' : 'incorrect';
+    const resultClass =
+      name === gameData.correct.name ? "correct" : "incorrect";
 
     e.target.classList.add(resultClass);
     revealPokemon();
-    speakAnswer();
+    
   });
 }
 
 function revealPokemon() {
-  main.classList.add('revealed');
+  pokemonGame.classList.add("revealed");
   textOverlay.textContent = `${gameData.correct.name}!`;
 }
 

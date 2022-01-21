@@ -1,3 +1,14 @@
+body,
+input {
+  font-family: 'Montserrat', sans-serif;  
+  color:rgb(0, 0, 0);
+ 
+}
+
+#searchedPokemon {
+  width: 100%;
+}
+
 a,
 .error {
   font-weight: bold;
@@ -20,6 +31,12 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+#searchBtn {
+  background-color: black;
+  color:white;
+  margin-left: 5px;
 }
 
 body{
