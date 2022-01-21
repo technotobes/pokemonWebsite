@@ -28,7 +28,7 @@ const loadCharacters = async () => {
         
 
     } catch (err){
-        console.error(err);
+        
     }
 
 } 
