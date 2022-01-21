@@ -157,7 +157,6 @@
   
   function addCardText(card, name, pokeInfo) {
     let textName = gen("h5");
-    console.log(textName)
     let textType = gen("h8");
     textName.textContent = name.slice(0,1).toUpperCase() + name.slice(1);
     if (pokeInfo.types[1] === undefined) {

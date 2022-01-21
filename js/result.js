@@ -39,7 +39,7 @@ const loadCharacters = async () => {
 // Displaying Pokemon Data Details
 const displayCharactersDetails = (characters) => {
     const pokemonData = characters;
-    console.log(characters)
+    // console.log(characters)
     pokemonName.innerHTML = `<strong>${characters.forms[0].name.slice(0,1).toUpperCase()}${characters.forms[0].name.slice(1,characters.forms[0].name.length)}</strong>`
     pokeSpriteImage.innerHTML = `<img src="${characters.sprites.other["official-artwork"].front_default}" />`
     pokedexNumber.innerHTML = `Pokedex #: ${characters.game_indices[8].game_index}`
@@ -77,7 +77,7 @@ const displayCharactersDetails = (characters) => {
     const firstAbility = pokemonData.abilities[0].ability.url
     const firstMove = pokemonData.moves[0].move.url
     getAbilityStats(firstAbility)
-    getMoveStats(firstMove)
+    getMoveDetails(firstMove)
 
     abilitiesSelect.addEventListener('change', (event) => {
     const url = event.target.value;
@@ -89,13 +89,13 @@ const displayCharactersDetails = (characters) => {
     movesSelect.addEventListener('change', (event) => {
     const url = event.target.value;
     console.log(url)
-    getMoveStats(url)
+    getMoveDetails(url)
     })
 
     }
 
 // get data of moves from url
-function getMoveStats(url) {
+function getMoveDetails(url) {
     fetch(url
     ).then((response) => {
         return response.json()
@@ -107,11 +107,21 @@ function getMoveStats(url) {
 }
 
 function displayMoveDetails(data) {
+    console.log(data)
     const details = document.querySelector("#movesDetails")
     const detailsData = data.effect_entries;
     detailsData.forEach((detailItem) => {
-        console.log(detailItem.effect)
-        details.innerText = detailItem.effect
+        console.log(detailItem)
+        details.innerText = `${detailItem.effect}
+
+                              Type: ${data.type.name.slice(0,1).toUpperCase()}${data.type.name.slice(1,data.type.name.length)}
+
+                              Power: ${data.power}
+
+                              Accuracy: ${data.accuracy}
+
+                              pp: ${data.pp}                              
+        `
         
     })
 }
@@ -132,7 +142,7 @@ function displayAbiltiesDetails(data) {
     const detailsData = data.effect_entries;
     detailsData.forEach((detailItem) => {
         if (detailItem.language.name === "en") {
-            console.log(detailsData)
+            // console.log(detailsData)
             details.innerText = detailItem.effect
         }
     })
@@ -155,7 +165,6 @@ const fetchPokeSpecies = async () => {
     }
 }
 const displayCharactersBio = (characters) => {
-    console.log(characters)
     pokemonBio.innerHTML = `<strong>${characters.flavor_text_entries[0].flavor_text}</strong>`
 
 } 
