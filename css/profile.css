@@ -132,19 +132,25 @@ input {
 }
 footer {
     width: 100%;
-    height: 5vh;
     background-color: #ef5350;
-    margin-bottom:2rem;
-  }
-  footer > p {
+    position:fixed;
+    bottom:0;
+    padding:5px;
     text-align: center;
+    font-size: smaller;
+    margin-bottom: 0rem;
   }
-  .infoText{
-      text-indent: 2rem;
-  }
-  .navbar-brand{
-      padding-top: 10px;
-  }
+
+footer,
+a {
+color: #ffffff;
+}
+.infoText{
+    text-indent: 2rem;
+}
+.navbar-brand{
+    padding-top: 10px;
+}
 
 @media screen and (min-width: 500px) {
     .button {
