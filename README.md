@@ -13,6 +13,7 @@
     - Types
     - Base States
     - Moves + Description
+        - Type, Power, Accuracy, PP
     - Abilities + Description
     
 
