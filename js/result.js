@@ -27,10 +27,14 @@ const loadCharacters = async () => {
         displayCharactersDetails(pCharacters);
         fetchPokeSpecies();
         } catch(err) {
-            console.log(error)
+            if (err instanceof SyntaxError) {
+            window.location.href = "404.html" 
+        } else {
+            console.log(err)
         }
-
-} 
+        return err;
+        } 
+    }
 
 // Displaying Pokemon Data Details
 const displayCharactersDetails = (characters) => {
@@ -88,7 +92,7 @@ const displayCharactersDetails = (characters) => {
     getMoveStats(url)
     })
 
-}
+    }
 
 // get data of moves from url
 function getMoveStats(url) {
@@ -157,12 +161,3 @@ const displayCharactersBio = (characters) => {
 } 
 
 document.getElementById("searchBtn").onclick = loadCharacters();
-
-
-function basicPopup(url) {
-    popupWindow = window.open(url,'popUpWindow','height=700,width=750,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
-        }
-
-function basicPopup2(url) {
-    popupWindow = window.open(url,'popUpWindow','height=700,width=750, left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
-        }
