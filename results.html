@@ -27,6 +27,7 @@
     <a class="navbar-brand" href="index.html">
       <img src="images/icon.png" alt="" width="25" height=25" class="d-inline-block align-text-top">
       PokéPedia</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -60,55 +61,61 @@
       </ul>
       
     </div>
+
+    <form id="input" action="results.html" method="GET" class="d-flex justify-content-end">
+      <input class="form-control me-2" id="searchedPokemon" name="poke-name" type="text" placeholder="Search for Pokémon" aria-label="Search" autocomplete="off" list="pokemonNameList" required />
+      <button class="btn" id="searchBtn" type="submit">Search</button>
+      <datalist></datalist>
+    </form>
   </nav>
 
 
 
     <main>
-      <form id="input" action="results.html" method="GET">
-        <div class="container">
-          <input type="text" id="searchedPokemon" name="poke-name" placeholder="Search for Pokemon" autocomplete="off" list="pokemonNameList" required />
-          <datalist>
 
-          </datalist>
-          <button id="searchBtn">Search</button>
-        </div>
-
-      </form>
       <div id=pokeInfoContainer>
         <div id=pokemonDetailsContainer>
 
           <div id="pokeInfo">
             <div id="pokemonName"></div>
-            
-            <div id="pokemonBio"></div>
             <div id="pokedexNumber"></div>
-            <div class="columns">
+            <div id="pokemonBio"></div>
+            <div id="pokeSpriteImage"></div>
+            
+            <div class="column1">
               <div class="column">
                <div id="baseStats"></div>
               </div> 
               <div class="column">
                <div id="baseSpecial"></div>
                </div>
-            </div>
-            <div id="pokeSkillsContainer"><div>
-                <label for="pokeAbilities">Abilities:</label>
-              <select name="pokeAbilities" id="ability"></select>
-              <div id="abilitiesDetails"></div>  
+               
               </div>
-              <div>
-                <label for="pokeMoves">Moves:</label>
-                <select name="pokeMoves" id="moves"></select>
-                <div id="movesDetails"></div>
-              </div>
+              <div id="pokeSkillsContainer">
+                <div id="pokeAbilitiesContainer">
+                   <label for="pokeAbilities">Abilities:</label>
+                   <select name="pokeAbilities" id="ability"></select>
+                   <div id="abilitiesDetails"></div>  
+                </div>
+                
+                <br />
+
+                <div id="pokeMovesContainer">
+                   <label for="pokeMoves">Moves:</label>
+                   <select name="pokeMoves" id="moves"></select>
+                   <div id="movesDetails"></div>
+                </div>
+                </div>
             </div>
           </div>
 
-          <div id="pokeSpriteImage"></div>
+          <div id="pokeEvoContainer">
+            <h3>Evolutions</h3>
+            <div id="poke-evolution"></div>
+          </div>
+          
         </div>
 
-        <h3>Evolutions</h3>
-        <div id="poke-evolution"></div>
       </div>
 
 

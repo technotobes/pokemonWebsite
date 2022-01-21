@@ -100,23 +100,158 @@ form {
   border-radius: 20px;
 }
 
-#pokemonDetailsContainer{
+
+
+.arrow {
+  max-height: 5vh;
+  opacity: 60%;
+  background-color:transparent;
+}
+
+
+.card {
+  margin: 30px;
+  border-radius: 5%;
+  padding: 5px;
+  max-width: 10vw;
+  text-align: center;
+}
+
+.card > img {
+  margin: 10px;
+}
+
+#pokeSpriteImage {
   display:flex;
+  justify-content: center;
+}
+
+#pokeSpriteImage img{
+  max-height: 50vh;
+  max-width: 50vw;
+  
+}
+
+.poke-stage img {
+  max-width: 40vw;
+  
+}
+
+main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#pokeInfoContainer {
+  background-color: rgba(134, 133, 133, 0.842);
+  border-radius: 20px;
+  padding:15px;
   width: 70vw;
-  height: 50vh;
-  padding: 20px;
-  justify-content:space-evenly;
+  margin-top: 50px;
 }
 
-#pokeContainer {
+#pokeEvoContainer {
   display:flex;
-  justify-content:center;
-  height:88vh;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  background-color: rgba(85, 85, 85, 0.644);
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.columns{
-  display: flex;
+#poke-evolution{
+  display:flex;
+  align-items: center;
 }
+
+h3 {
+  text-align: center;
+  color:white;
+  background-color: grey;
+  width: 40vw;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+#searchBtn {
+  background-color: black;
+  color:white;
+}
+
+#pokemonName {
+  color:white;
+  font-size: x-large;
+  margin-left: 20px;
+}
+
+#pokedexNumber {
+  margin-left: 35px;
+  font-weight: 900;
+  color: rgb(226, 0, 0);
+}
+
+#pokemonBio {
+  font-size: large;
+  margin: 10px;
+}
+
+.column1{
+  display: flex;
+  margin-top: 30px;
+  background-color: rgba(85, 85, 85, 0.644);
+  border-radius: 10px;
+}
+
 .column{
-  flex: 50%;
+  color: red;
+  padding:10px;
+  font-weight:500;
+  flex: 1%;
+}
+
+
+
+#pokeSkillsContainer {
+  display:flex;
+  margin-top: 30px;
+  background-color: rgba(85, 85, 85, 0.644);
+  padding:10px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+
+#pokeAbilitiesContainer {
+  padding-right: 20px;
+  width:50%;
+}
+
+#pokeMovesContainer {
+  padding-left: 20px;
+  width:50%;
+}
+
+#pokeMovesContainer label{
+  color:white;
+  font-weight: 800;
+}
+
+#pokeAbilitiesContainer label{
+  color:white;
+  font-weight: 800;
+}
+
+#movesDetails {
+  overflow: scroll;
+  height:40vh;
+  color:white;
+}
+
+#abilitiesDetails {
+  overflow: scroll;
+  height:40vh;
+  color:white;
 }
