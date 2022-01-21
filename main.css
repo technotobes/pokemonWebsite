@@ -13,9 +13,9 @@ body {
 body,
 input {
   font-family: 'Montserrat', sans-serif;  
-  color:rgb(0, 0, 0);
  
 }
+
 
 
 footer,
@@ -32,6 +32,7 @@ footer {
   text-align: center;
   font-size: smaller;
 }
+
 
 a {
   text-decoration: none;
@@ -252,7 +253,8 @@ h5 {
 }
 
 #movesDetails {
-  overflow: scroll;
+  overflow: hidden;
+  overflow-y: scroll;
   height:40vh;
   color:white;
   background-color: rgb(65, 65, 65);
@@ -261,7 +263,7 @@ h5 {
 }
 
 #abilitiesDetails {
-  overflow: scroll;
+  overflow-y: scroll;
   height:40vh;
   color:white;
   background-color: rgb(65, 65, 65);
