@@ -1,6 +1,4 @@
-nav {
-  background-color: rgba(241, 93, 93, 0.746);
-}
+
 
 a,
 .error {
@@ -185,8 +183,9 @@ h3 {
 
 #pokemonName {
   color:white;
-  font-size: x-large;
+  font-size: xx-large;
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 #pokedexNumber {
@@ -214,10 +213,11 @@ h5 {
 }
 
 .column{
-  color: red;
+  color: rgb(255, 255, 255);
   padding:20px;
   font-weight:500;
   flex: 1%;
+  background-color: grey;
 }
 
 
@@ -255,16 +255,29 @@ h5 {
   overflow: scroll;
   height:40vh;
   color:white;
+  background-color: rgb(65, 65, 65);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #abilitiesDetails {
   overflow: scroll;
   height:40vh;
   color:white;
+  background-color: rgb(65, 65, 65);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #pokemonType {
   color: white;
   font-weight: 500;
   margin-left: 50px;
+}
+
+#pokemonBio {
+  background-color: rgba(255, 94, 94, 0.644);
+  padding: 20px;
+  border-radius: 40px;
+  color:white;
 }

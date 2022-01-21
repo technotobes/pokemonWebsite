@@ -1,6 +1,26 @@
+#searchBtn {
+    background-color: black;
+    color:white;
+    margin-left: 5px;
+  }
 
-body{
-    background-image: url(/images/pbBackround.jpg);
+a,
+.error {
+  font-weight: bold;
+}
+
+body {
+    background: black url("/images/pbBackround.jpg") no-repeat fixed center;
+  }
+
+body,
+input {
+font-family: 'Montserrat', sans-serif;  
+color:rgb(0, 0, 0);
+
+}
+.nav {
+    align-items: center;
 }
 
 
@@ -136,6 +156,7 @@ footer {
     }
 }
 
+
 @media screen and (min-width: 768px) {
     .button {
         width: auto;
@@ -154,3 +175,4 @@ footer {
         width: 90%;
         margin: auto;
     }
+
