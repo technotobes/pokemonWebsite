@@ -175,6 +175,9 @@ button.incorrect {
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
 }
+.navbar-brand{
+  padding-top: 10px;
+}
 
 @keyframes wiggle {
   0% { transform: rotate(0deg); }

@@ -46,6 +46,8 @@ body{
   .infoText{
       text-indent: 2rem;
   }
+
+
   
   @media screen and (min-width: 500px) {
     .button {

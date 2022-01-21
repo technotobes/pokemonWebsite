@@ -142,6 +142,9 @@ footer {
   .infoText{
       text-indent: 2rem;
   }
+  .navbar-brand{
+      padding-top: 10px;
+  }
 
 @media screen and (min-width: 500px) {
     .button {
@@ -174,5 +177,4 @@ footer {
     .container {
         width: 90%;
         margin: auto;
-    }
-
+    }}
