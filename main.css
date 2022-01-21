@@ -1,3 +1,12 @@
+nav {
+  background-color: rgba(241, 93, 93, 0.746);
+}
+
+a,
+.error {
+  font-weight: bold;
+}
+
 body {
   background: black url("/images/pbBackround.jpg") no-repeat fixed center;
 }
@@ -10,32 +19,6 @@ input {
  
 }
 
-
-body,
-header,
-main,
-#poke-evolution,
-.poke-stage,
-.card {
-
-  justify-content: center;
-  align-items: center;
-}
-
-
-body,
-header,
-main,
-.card {
-  flex-direction: column;
-}
-
-
-main {
-  justify-content: flex-start;
-  min-height: 10vh;
-  margin-bottom: 10px;
-}
 
 footer,
 a {
@@ -50,17 +33,6 @@ footer {
   padding:5px;
   text-align: center;
   font-size: smaller;
-}
-
-
-input {
-  padding: 5px;
-
-}
-
-a,
-.error {
-  font-weight: bold;
 }
 
 a {
@@ -78,7 +50,7 @@ a {
 
 #logo {
   display: inline-block;
-  height: 3em;
+  height: 5em;
 }
 
 #poke-evolution {
@@ -110,6 +82,19 @@ a {
   margin: auto 0;
 }
 
+form {
+  margin: 0;
+}
+
+#searchBoxContainer { 
+  background-color: rgba(128, 128, 128, 0.808);
+  align-self: center;
+  align-items: center;
+  padding: 70px;
+  border-radius: 10px;
+  display: flex;
+}
+
 #pokeInfoContainer {
   background-color: rgba(134, 133, 133, 0.842);
   border-radius: 20px;
@@ -123,55 +108,10 @@ a {
   justify-content:space-evenly;
 }
 
-#pokemonName {
-  color: white;
-  font-size: larger;
-}
-
-#arrow {
-  width: 3vw;
-}
-
-h3 {
-  text-align: center;
-  color:white;
-}
-
-nav {
-
-  background-color: rgba(241, 93, 93, 0.746);
-}
-
-#searchBoxContainer { 
-  background-color: rgba(128, 128, 128, 0.808);
-  align-self: center;
-  align-items: center;
-  padding: 70px;
-  border-radius: 10px;
-  display: flex;
-}
-
 #pokeContainer {
   display:flex;
   justify-content:center;
   height:88vh;
-}
-
-form {
-  margin: 0;
-}
-
-button {
-  background-color: black;
-  color:white;
-  border-radius: 10px;
-  
-}
-
-#pokeSkillsContainer {
-  display:flex;
-  padding: 10px;
-  justify-content: space-between;
 }
 
 .columns{
